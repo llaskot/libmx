@@ -20,15 +20,12 @@ static int atoi_rules(const char c) {
 
 int mx_atoi(const char *str) {
 	int res = 0;
-	char* cleaned =  mx_del_extra_spaces(str);
-	for (int i = 0; cleaned[i] != '\0'; i++) {
-		const int num = atoi_rules(cleaned[i]);
+	for (int i = 0; str[i] != '\0'; i++) {
+		const int num = atoi_rules(str[i]);
 		if (num == -1) {
-			mx_strdel(&cleaned);
 			return -1;
 		}
 		res = res * 10 + num;
 	}
-	mx_strdel(&cleaned);
 	return res;
 }
