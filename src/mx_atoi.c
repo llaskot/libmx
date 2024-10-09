@@ -1,6 +1,6 @@
 #include "libmx.h"
 
-int atoi_rules(const char c) {
+static int atoi_rules(const char c) {
 	switch (c) {
 		case '0': return 0;
 		case '1': return 1;
