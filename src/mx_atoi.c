@@ -23,8 +23,10 @@ int mx_atoi(const char *str) {
 	char* cleaned =  mx_del_extra_spaces(str);
 	for (int i = 0; cleaned[i] != '\0'; i++) {
 		const int num = atoi_rules(cleaned[i]);
-		if (num == -1)
+		if (num == -1) {
+			mx_strdel(&cleaned);
 			return -1;
+		}
 		res = res * 10 + num;
 	}
 	mx_strdel(&cleaned);
