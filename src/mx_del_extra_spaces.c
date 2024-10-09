@@ -5,7 +5,11 @@ int check_is_whitespase(char c);
 void mx_strdel(char** str);
 char* mx_strnew(int size);
 
-
+/**
+ *
+ * @param str
+ * @return new allocated string
+ */
 char* mx_del_extra_spaces(const char* str) {
 	if (str == NULL)
 		return NULL;

@@ -31,6 +31,8 @@ char *mx_strjoin(const char *s1, const char *s2);
 char *mx_file_to_str(const char *file);
 char *mx_replace_substr(const char *str, const char *sub, const char *replace);
 int mx_read_line(char **lineptr, size_t buf_size, char delim, const int fd);
+int mx_count_words(const char *str, char c);
+
 
 
 
@@ -46,7 +48,6 @@ int mx_bubble_sort(char **arr, int size) ;
 int mx_quicksort(char **arr, int left, int right);
 void mx_swap_char(char *s1, char *s2);
 int mx_get_char_index(const char *str, char c);
-int mx_count_words(const char *str, char c);
 void *mx_memset(void *b, int c, size_t len);
 void *mx_memcpy(void *restrict dst, const void *restrict src, size_t n);
 void *mx_memccpy(void *restrict dst, const void *restrict src, int c, size_t n);
@@ -69,6 +70,7 @@ t_list* mx_sort_list(t_list* lst, bool (*cmp)(void*, void*));
  * my own
  */
 int mx_get_arr_len(char** arr);
+int mx_atoi(const char *str);
 
 
 
